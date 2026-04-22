@@ -710,7 +710,7 @@ export default function DomeGallery({
 
     const labelRight = document.createElement('div');
     labelRight.className = 'romantic-label label-right font-playfair';
-    labelRight.innerText = 'Everything';
+    labelRight.innerText = 'Love';
 
     viewerRef.current?.appendChild(labelLeft);
     viewerRef.current?.appendChild(labelRight);
