@@ -26,7 +26,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-screen h-screen bg-[#060010]">
+    <main className="w-screen h-screen animated-gradient-bg noise-overlay overflow-hidden">
       {!showGallery ? (
         <InteractionFlow onFlowComplete={() => setShowGallery(true)} />
       ) : (
