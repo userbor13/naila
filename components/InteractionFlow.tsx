@@ -319,7 +319,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
                     <div className="absolute inset-0 aurora-glow opacity-50 mix-blend-screen" />
                 )}
                 
-                <div className="relative w-full aspect-[2/1.2] flex flex-col items-center justify-end overflow-hidden z-10">
+                <div className="relative w-full aspect-[2/1.4] flex flex-col items-center justify-end overflow-visible z-10 pt-6">
                     <svg viewBox="0 0 240 140" className="w-full h-full absolute top-0 overflow-visible">
                         <path
                             d="M 20,120 A 100,100 0 0 1 220,120"
@@ -359,12 +359,12 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
                                 duration: progress === 100 ? 0.8 : 2 - (progress/100),
                             }}
                         >
-                            <Heart className={`w-20 h-20 text-red-500 fill-red-500 mb-2 ${progress === 100 ? 'drop-shadow-[0_0_25px_rgba(239,68,68,1)]' : 'drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]'}`} />
+                            <Heart className={`w-16 h-16 md:w-20 md:h-20 text-red-500 fill-red-500 mb-2 ${progress === 100 ? 'drop-shadow-[0_0_25px_rgba(239,68,68,1)]' : 'drop-shadow-[0_0_10px_rgba(239,68,68,0.5)]'}`} />
                         </motion.div>
-                        <div className="text-7xl font-black text-white font-mono tracking-tighter text-glow-soft">
-                            {Math.floor(progress)}<span className="text-pink-400 text-4xl">%</span>
+                        <div className="text-5xl md:text-7xl font-black text-white font-mono tracking-tighter text-glow-soft">
+                            {Math.floor(progress)}<span className="text-pink-400 text-3xl md:text-4xl">%</span>
                         </div>
-                        <span className="text-xl text-white/70 font-playfair italic mt-3 tracking-[0.3em] uppercase">Love Intensity</span>
+                        <span className="text-sm md:text-xl text-white/70 font-playfair italic mt-2 md:mt-3 tracking-[0.2em] md:tracking-[0.3em] uppercase">Love Intensity</span>
                     </div>
                 </div>
 
